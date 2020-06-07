@@ -1,0 +1,22 @@
+<div class="header">
+  <h1>Angular Swiper Test</h1>
+
+  <p>Try changing slide numbers</p>
+  <input type="number" pattern="[0-9]" [(ngModel)]="slides">
+  <button (click)="updateItems()">Update slides</button>
+  <p *ngIf="invalid" class="error"><small><em>Inalid number!</em></small></p>
+  <p>Change label <input type="text" maxlength="{{charLimit}}" [(ngModel)]="label" (input)="checkLength()"></p>
+  <p *ngIf="maxlength" class="error"><small><em>Maximum {{charLimit}} characters!</em></small></p>
+  <label>Show content area <input type="checkbox" [(ngModel)]="showBox"></label>
+</div>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let item of items">
+      <div class="item" [ngClass]="{'box-bg': showBox}">
+        <span class="item-box"></span>
+        <span class="item-label">{{label}} {{item}}</span>
+      </div>
+    </div>
+  </div>
+</div>
