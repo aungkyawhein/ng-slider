@@ -6,7 +6,7 @@
     "start": "ng serve",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist/ngSlider",
-    "build": "ng build",
+    "build": "ng build --prod --base-href /ng-slider/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
