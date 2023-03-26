@@ -1,4 +1,4 @@
-@import '~swiper/swiper-bundle';
+@import '../../node_modules/swiper/swiper';
 
 .item {
   display: flex;
@@ -41,12 +41,12 @@
       bottom: .25rem;
       left: .25rem;
       right: .25rem;
-      border: 1px dashed rgba(0,0,0,0.05);
+      border: 1px dashed rgba(0, 0, 0, 0.05);
     }
   }
 
   &:hover {
-    background-color: rgba(0,0,0,0.07);
+    background-color: rgba(0, 0, 0, 0.07);
   }
 }
 
